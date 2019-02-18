@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Draw Like Turner | Canvas Drawing App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <div class="logo">
+    <img src="images/logo2.png"/>
+  </div>
+
+  <div id="toolbox">
+    <div id="tools" class="toolbar">
+        <img src="images/small.png" data-mode="draw" data-size="5" class="active" title="small"/>
+        <img src="images/medium.png" data-mode="draw" data-size="10" title="medium"/>
+        <img src="images/large.png" data-mode="draw" data-size="20" title="large"/>
+        <!-- <img src="images/paint-brush.png" data-mode="draw" data-size="20" title="paintbrush"/> -->
+        <img src="images/eraser.png" data-mode="erase" data-size="10" title="eraser"/>
+        <img src="images/undo.png" data-action="undo" class="disabled" title="undo"/>
+        <img src="images/delete.png" data-action="delete" title="delete"/>
+    </div>
+    <div id="colors" class="toolbar">
+        <img src="images/brown.png" data-color="#5f3a27" class="active" title="brown"/>
+        <img src="images/camel.png" data-color="#af7643" title="camel"/>
+        <img src="images/custard.png" data-color="#d4bd93" title="custard"/>
+        <img src="images/mint.png" data-color="#a3b09e" title="mint"/>
+        <img src="images/sea-green.png" data-color="#617561" title="sea-green"/>
+        <img src="images/sea-glass.png" data-color="#4d7074" title="sea-glass"/>
+        <img src="images/peacock.png" data-color="#223134" title="peacock"/>
+        <img src="images/lavendar.png" data-color="#c9c7d8" title="lavendar"/>
+    </div>
+  </div>
+	
+  <div id="app">   
+    <canvas id="canvas" width="700" height="500"></canvas>
+  </div>
+
+
+  <div id="bg-img">
+    <div id="tools" class="bg">
+        <img type="button" onclick="bg()" src="images/paper.jpg" title="Paper"/>
+        <img type="button" onclick="bg1()" src="images/bg1.jpeg" title="Beach"/>
+        <img type="button" onclick="bg2()" src="images/bg2.jpg" title="Mountain"/>
+        <img type="button" onclick="bg3()" src="images/bg3.jpg" title="Lake"/>
+        <button class="button button1" onclick="blurOn()">Blur Effect</button>
+        <button class="button button2" onclick="blurOff()">No Effect</button>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
